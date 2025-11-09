@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simple Portfolio</title>
+  <title>Portfolio</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#0f1724; /* deep navy */
+    root{
+      --bg:#0f1724; 
       --card:#0b1220;
-      --accent:#6c5ce7; /* purple */
+      --accent:#6c5ce7;
       --muted:#9aa4b2;
       --glass: rgba(255,255,255,0.04);
       --radius:16px;
@@ -26,16 +26,13 @@
       -moz-osx-font-smoothing:grayscale;
       line-height:1.5;
     }
-    /* container */
     .container{max-width:1000px;margin:36px auto;padding:24px;}
-    /* header */
     header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
     .brand{display:flex;gap:12px;align-items:center}
     .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700}
     .logo span{font-family:Merriweather, serif}
     nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
-    nav a:hover{color:#fff}
-    /* hero */
+    nav a:hover{color:#fff
     .hero{
       display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
       padding:28px;border-radius:20px;backdrop-filter: blur(6px);
@@ -46,12 +43,10 @@
     .profile-card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(5,7,12,0.6)}
     .profile-card img{width:100%;border-radius:10px;display:block}
     .small{font-size:13px;color:var(--muted)}
-    /* sections */
     section{margin-top:26px}
     h2{font-size:20px;margin:6px 0 14px}
     .about{display:flex;gap:20px}
-    .about p{color:var(--muted);margin:0}
-    /* portfolio grid */
+    .about p{color:var(--muted);margin:0
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
     .card{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
     .card h3{margin:0 0 8px;font-size:16px}
@@ -79,8 +74,8 @@
       <div class="brand">
         <div class="logo"><span>S</span></div>
         <div>
-          <div style="font-weight:700">Your Name</div>
-          <div class="small">Web Designer &amp; Developer</div>
+          <div style="font-weight:700">Fitsum Tadesse</div>
+          <div class="small">Web Designer</div>
         </div>
       </div>
       <nav>
@@ -92,10 +87,10 @@
     <main>
       <section class="hero" id="home">
         <div class="intro">
-          <h1>Hi — I'm Your Name.
+          <h1>Hi — Fitsum Tadesse.
             <div style="font-size:14px;color:var(--muted);font-weight:600">I design simple, usable websites</div>
           </h1>
-          <p>I focus on clean interfaces and practical solutions for small businesses, students, and creative projects. Below are a few types of projects I work on.</p>
+          <p>I focus on clean interfaces and practical solutions for people Below are a few types of projects I work on.</p>
           <a class="cta" href="#work">See my work</a>
         </div>
         <aside class="profile-card">
@@ -103,7 +98,6 @@
           <div style="margin-top:12px">
             <div style="font-weight:700">Quick facts</div>
             <div class="small">Location: Addis Ababa</div>
-            <div class="small">Availability: Open to freelance</div>
           </div>
         </aside>
       </section>
@@ -111,13 +105,13 @@
         <h2>About</h2>
         <div class="about">
           <div style="flex:1">
-            <p class="small">I'm a front-end focused designer who loves turning ideas into clean, accessible websites. I balance aesthetics with performance and make sites that feel fast and modern.</p>
-            <p class="small" style="margin-top:10px">Skills: HTML, CSS, JavaScript, Responsive design, Basic accessibility, Git</p>
+            <p class="small">I'm a front-end focused designer who loves turning ideas into clean, accessible website</p>
+            <p class="small" st</p>
           </div>
           <div style="width:220px">
             <div class="card">
               <h3>Services</h3>
-              <p>Landing pages, Student projects, Small business websites, UI/UX consultation</p>
+              <p> Student projects</p>
             </div>
           </div>
         </div>
@@ -126,20 +120,12 @@
         <h2>Portfolio — what I build</h2>
         <div class="grid">
           <div class="card">
-            <h3>Business Landing Page</h3>
-            <p>Fast, responsive landing page for local café. Focus on menu &amp; contact.</p>
+            <h3>Student Project on mental health</h3>
+            <p>Simple portal for peoples whi are struggling with mental health like depression, anxiety, addiction and so on </p>
           </div>
           <div class="card">
-            <h3>Student Project Portal</h3>
-            <p>Simple portal for uploading assignments and listing resources.</p>
-          </div>
-          <div class="card">
-            <h3>Personal Blog Theme</h3>
+            <h3>mental health Blog Theme</h3>
             <p>Clean, readable layout optimized for long-form content.</p>
-          </div>
-          <div class="card">
-            <h3>Event Promo Page</h3>
-            <p>Single-page site with schedule, registration form and map.</p>
           </div>
         </div>
       </section>
@@ -148,9 +134,9 @@
         <div class="contact">
           <form onsubmit="event.preventDefault(); alert('This is a demo. Replace with your form handling.');">
             <label for="name">Your name</label>
-            <input id="name" placeholder="e.g. Bekur Sileshi" />
-            <label for="email">Email</label>
-            <input id="email" placeholder="you@example.com" />
+            <input id="name" placeholder="Fitsum Tadesse" />
+            <label for="email">Email/label>
+            <input id="email" placeholder="taddesefitsum281@gmail.com<" />
             <label for="message">Message</label>
             <textarea id="message" placeholder="Tell me about your project..."></textarea>
             <button class="send" type="submit">Send message</button>
@@ -158,8 +144,8 @@
           <div style="width:260px">
             <div class="card">
               <h3>Quick contact</h3>
-              <p class="small">Email: you@domain.com</p>
-              <p class="small">Instagram: @yourhandle</p>
+              <p class="small">Email: tadesefitsum281@gmail.com</p>
+              <p class="small">Instagram: @fitse_joy7</p>
               <p class="small">Phone: +251 9xx xxx xxx</p>
             </div>
           </div>
@@ -167,7 +153,7 @@
       </section>
     </main>
     <footer>
-      <div>Made with ❤️ — feel free to customize this template.</div>
+      <div>portfolio for web design assignment</div>
     </footer>
   </div>
 </body>
