@@ -3,71 +3,241 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio</title>
+  <title>Fitsum Tadesse - Portfolio</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    root{
-      --bg:#0f1724; 
-      --card:#0b1220;
-      --accent:#6c5ce7;
-      --muted:#9aa4b2;
+    :root {
+      --bg: #0f1724; 
+      --card: #0b1220;
+      --accent: #6c5ce7;
+      --muted: #9aa4b2;
       --glass: rgba(255,255,255,0.04);
-      --radius:16px;
+      --radius: 16px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{
-      margin:0;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      background: linear-gradient(180deg,var(--bg),#081021 80%);
-      color:#e6eef6;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.5;
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: linear-gradient(180deg, var(--bg), #081021 80%);
+      color: #e6eef6;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    .container{max-width:1000px;margin:36px auto;padding:24px;}
-    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700}
-    .logo span{font-family:Merriweather, serif}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600;font-size:14px}
-    nav a:hover{color:#fff
-    .hero{
-      display:grid;grid-template-columns:1fr 340px;gap:28px;align-items:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      padding:28px;border-radius:20px;backdrop-filter: blur(6px);
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
     }
-    .hero .intro h1{font-family:Merriweather, serif;font-size:36px;margin:0 0 12px}
-    .hero .intro p{color:var(--muted);margin:0 0 18px}
-    .cta{display:inline-block;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--accent),#3b82f6);text-decoration:none;color:#fff;font-weight:600}
-    .profile-card{background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(5,7,12,0.6)}
-    .profile-card img{width:100%;border-radius:10px;display:block}
-    .small{font-size:13px;color:var(--muted)}
-    section{margin-top:26px}
-    h2{font-size:20px;margin:6px 0 14px}
-    .about{display:flex;gap:20px}
-    .about p{color:var(--muted);margin:0
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
-    .card{background:var(--glass);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .card h3{margin:0 0 8px;font-size:16px}
-    .card p{margin:0;color:var(--muted);font-size:13px}
-    /* contact */
-    .contact{display:flex;gap:24px;align-items:flex-start}
-    form{flex:1;background:var(--card);padding:18px;border-radius:12px}
-    label{display:block;font-size:13px;margin-bottom:6px}
-    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
-    textarea{min-height:110px;resize:vertical}
-    .send{margin-top:10px;padding:10px 14px;border-radius:10px;background:var(--accent);border:none;color:#fff;font-weight:600;cursor:pointer}
-    /* footer */
-    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
-    /* responsive */
-    @media (max-width:860px){
-      .hero{grid-template-columns:1fr}
-      nav a{margin-left:12px}
-      .container{padding:18px}
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent), #3b82f6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-family: 'Merriweather', serif;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 18px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 28px;
+      align-items: center;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding: 28px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+    }
+
+    .hero .intro h1 {
+      font-family: 'Merriweather', serif;
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .hero .intro p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, var(--accent), #3b82f6);
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .cta:hover {
+      opacity: 0.9;
+    }
+
+    .profile-card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(5,7,12,0.6);
+    }
+
+    .profile-card img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      font-family: 'Merriweather', serif;
+    }
+
+    .about {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .about p {
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--glass);
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Contact section */
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    form {
+      flex: 1;
+      background: var(--card);
+      padding: 18px;
+      border-radius: 12px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: transparent;
+      color: inherit;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .send {
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: var(--accent);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .send:hover {
+      opacity: 0.9;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -84,66 +254,75 @@
         <a href="#contact">Contact</a>
       </nav>
     </header>
+
     <main>
       <section class="hero" id="home">
         <div class="intro">
-          <h1>Hi — Fitsum Tadesse.
-            <div style="font-size:14px;color:var(--muted);font-weight:600">I design simple, usable websites</div>
-          </h1>
-          <p>I focus on clean interfaces and practical solutions for people Below are a few types of projects I work on.</p>
+          <h1>Hi, I’m Fitsum Tadesse</h1>
+          <p>I design clean, user-friendly websites and student projects that focus on simplicity and functionality.</p>
           <a class="cta" href="#work">See my work</a>
         </div>
+
         <aside class="profile-card">
-          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Profile" />
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Profile">
           <div style="margin-top:12px">
             <div style="font-weight:700">Quick facts</div>
             <div class="small">Location: Addis Ababa</div>
           </div>
         </aside>
       </section>
+
       <section id="about">
         <h2>About</h2>
         <div class="about">
           <div style="flex:1">
-            <p class="small">I'm a front-end focused designer who loves turning ideas into clean, accessible website</p>
-            <p class="small" st</p>
+            <p>I’m a front-end focused designer who loves turning ideas into functional, accessible websites.</p>
+            <p>I enjoy working on small creative projects and helping people express their ideas online.</p>
           </div>
           <div style="width:220px">
             <div class="card">
               <h3>Services</h3>
-              <p> Student projects</p>
+              <p>Student Projects</p>
+              <p>Simple Website Design</p>
+              <p>Portfolio Layouts</p>
             </div>
           </div>
         </div>
       </section>
+
       <section id="work">
-        <h2>Portfolio — what I build</h2>
+        <h2>Portfolio — What I Build</h2>
         <div class="grid">
           <div class="card">
-            <h3>Student Project on mental health</h3>
-            <p>Simple portal for peoples whi are struggling with mental health like depression, anxiety, addiction and so on </p>
+            <h3>Mental Health Support Portal</h3>
+            <p>A simple site that supports people facing depression, anxiety, and addiction through information and connection.</p>
           </div>
           <div class="card">
-            <h3>mental health Blog Theme</h3>
-            <p>Clean, readable layout optimized for long-form content.</p>
+            <h3>Mental Health Blog Theme</h3>
+            <p>A clean, readable layout designed for long-form articles and easy reading.</p>
           </div>
         </div>
       </section>
+
       <section id="contact">
         <h2>Contact</h2>
         <div class="contact">
-          <form onsubmit="event.preventDefault(); alert('This is a demo. Replace with your form handling.');">
-            <label for="name">Your name</label>
-            <input id="name" placeholder="Fitsum Tadesse" />
-            <label for="email">Email/label>
-            <input id="email" placeholder="taddesefitsum281@gmail.com<" />
+          <form onsubmit="event.preventDefault(); alert('This is a demo form. Replace with real contact handling.');">
+            <label for="name">Your Name</label>
+            <input id="name" placeholder="Fitsum Tadesse" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="tadesefitsum281@gmail.com" required>
+
             <label for="message">Message</label>
-            <textarea id="message" placeholder="Tell me about your project..."></textarea>
-            <button class="send" type="submit">Send message</button>
+            <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+
+            <button class="send" type="submit">Send Message</button>
           </form>
+
           <div style="width:260px">
             <div class="card">
-              <h3>Quick contact</h3>
+              <h3>Quick Contact</h3>
               <p class="small">Email: tadesefitsum281@gmail.com</p>
               <p class="small">Instagram: @fitse_joy7</p>
               <p class="small">Phone: +251 9xx xxx xxx</p>
@@ -152,9 +331,10 @@
         </div>
       </section>
     </main>
+
     <footer>
-      <div>portfolio for web design assignment</div>
+      <div>Portfolio created by Fitsum Tadesse — Web Design Assignment</div>
     </footer>
   </div>
 </body>
-</html>
+  </html>
